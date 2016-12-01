@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -84,11 +85,13 @@ public class FlipLoadingLayout extends LoadingLayout {
 
 	@Override
 	protected void onPullImpl(float scaleOfLayout) {
+		Log.i("test","onPullImpl");
 		// NO-OP
 	}
 
 	@Override
 	protected void pullToRefreshImpl() {
+		Log.i("test","pullToRefreshImpl");
 		// Only start reset Animation, we've previously show the rotate anim
 		if (mRotateAnimation == mHeaderImage.getAnimation()) {
 			mHeaderImage.startAnimation(mResetRotateAnimation);
@@ -97,6 +100,7 @@ public class FlipLoadingLayout extends LoadingLayout {
 
 	@Override
 	protected void refreshingImpl() {
+		Log.i("test","refreshingImpl");
 		mHeaderImage.clearAnimation();
 		mHeaderImage.setVisibility(View.INVISIBLE);
 		mHeaderProgress.setVisibility(View.VISIBLE);
@@ -104,11 +108,13 @@ public class FlipLoadingLayout extends LoadingLayout {
 
 	@Override
 	protected void releaseToRefreshImpl() {
+		Log.i("test","releaseToRefreshImpl");
 		mHeaderImage.startAnimation(mRotateAnimation);
 	}
 
 	@Override
 	protected void resetImpl() {
+		Log.i("test","resetImpl");
 		mHeaderImage.clearAnimation();
 		mHeaderProgress.setVisibility(View.GONE);
 		mHeaderImage.setVisibility(View.VISIBLE);

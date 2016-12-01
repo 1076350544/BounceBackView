@@ -19,6 +19,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView.ScaleType;
@@ -63,6 +64,7 @@ public class RotateLoadingLayout extends LoadingLayout {
 	}
 
 	protected void onPullImpl(float scaleOfLayout) {
+		Log.i("test","onPullImpl");
 		float angle;
 		if (mRotateDrawableWhilePulling) {
 			angle = scaleOfLayout * 90f;
@@ -76,11 +78,13 @@ public class RotateLoadingLayout extends LoadingLayout {
 
 	@Override
 	protected void refreshingImpl() {
+		Log.i("test","refreshingImpl");
 		mHeaderImage.startAnimation(mRotateAnimation);
 	}
 
 	@Override
 	protected void resetImpl() {
+		Log.i("test","resetImpl");
 		mHeaderImage.clearAnimation();
 		resetImageRotation();
 	}
@@ -94,11 +98,13 @@ public class RotateLoadingLayout extends LoadingLayout {
 
 	@Override
 	protected void pullToRefreshImpl() {
+		Log.i("test","pullToRefreshImpl");
 		// NO-OP
 	}
 
 	@Override
 	protected void releaseToRefreshImpl() {
+		Log.i("test","releaseToRefreshImpl");
 		// NO-OP
 	}
 
