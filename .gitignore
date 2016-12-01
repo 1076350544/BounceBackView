@@ -1,1 +1,25 @@
 # Created by .ignore support plugin (hsz.mobi)
+    .gradle/
+    .idea/compiler.xml
+    .idea/copyright/
+    .idea/gradle.xml
+    .idea/libraries/
+    .idea/misc.xml
+    .idea/modules.xml
+    .idea/runConfigurations.xml
+    .idea/workspace.xml
+    BounceBackView.iml
+    PullToRefreshAndLoad/PullToRefreshAndLoad.iml
+    build/
+    library/build/
+    library/library.iml
+    local.properties
+    pullToRefreshListFragment/build/
+    pullToRefreshListFragment/pullToRefreshListFragment.iml
+    pullToRefreshViewPager/build/
+    pullToRefreshViewPager/pullToRefreshViewPager.iml
+    pulltorefresh/
+    pulltorefreshexample/
+    sample/build/
+    sample/sample.iml
+    sample/src/main/res/layout/layout.xml
